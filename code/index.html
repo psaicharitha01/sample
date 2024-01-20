@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Health</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #1a1a1a; /* Dark background color */
+      color: #fff; /* Text color */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Hero Image Section */
+    header {
+      text-align: center;
+      padding: 50px;
+    }
+
+    /* Booking Form Section */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #fff;
+      background-color: #333; /* Dark form background color */
+      color: #fff;
+    }
+	.card-deck {
+      margin-top: 20px;
+    }
+
+    .card {
+      color: #000;
+    }
+	.testimonials-heading {
+	   text-align:center;
+	   }
+	   .card-img-top1 {
+  height: 200px; /* Set a fixed height for the card images */
+  object-fit: cover; /* This property ensures that the image covers the entire designated space */
+}
+	</style>
+  </head>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+      var age = document.getElementById('age').value;
+      var city = document.getElementById('city').value;
+      var company = document.getElementById('company').value;
+      var complaints = document.getElementById('complaints').value;
+
+      if (name === "" || phone === "" || age === "" || city === "" || company === "" || complaints === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+
+      if (isNaN(age) || age < 1) {
+        alert("Please enter a valid age");
+        return false;
+      }
+
+      // Add more specific validations as needed for phone, name, etc.
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <!-- Hero Image Section -->
+  <header>
+    <img src="aa1.jpeg" alt="Healthcare Hero Image" width="200" height="200">
+  </header>
+
+  <!-- Booking Form Section -->
+  <form onsubmit="return validateForm()" >
+    <label for="name" >Name:</label>
+    <input type="text" id="name" name="name" required>
+	<label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+	<label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+	<label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+	<label for="company">Company:</label>
+    <input type="text" id="company" name="company" required>
+	<label for="complaints">Chief Complaints:</label>
+    <textarea id="complaints" name="complaints" rows="4" required></textarea>
+	<button type="submit">Book Consultation</button>
+  </form>
+  <!-- Testimonials Section -->
+  <div class="container">
+    <h2 class="testimonials-heading">Testimonials</h2>
+    <div class="card-deck">
+      <div class="card">
+	  <img src="simple.jpeg" class="card-img-top1" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">Hello, look who is back at work. We are all very grateful with the whole staff that 
+		  works at FixHealth, thank you for your attentions, hospitality and good work. Hopefully we will see you
+		  all soon either in Los Angeles or in Honduras...</p>
+        </div>
+      </div>
+      <div class="card">
+	  <img src="cartoon2.jpg" class="card-img-top1" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">It's evident to me by the way the hospital is run that they really believe in what they do. 
+		  It reflects in everyone's work from the person who comes to clean up the rooms, 
+		  to the nurses, and everyone in-between..</p>
+        </div>
+      </div>
+      <div class="card">
+	  <img src="simple2.jpg" class="card-img-top1" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">"I can't thank you enough for the special, excellent care you have provided and for the unique 
+		  gift you are to your patients.Thank you for your positive attitude, for making me feel more like a family member than 
+		  a patient, for always being there when I needed you and for making room for me in your busy schedule".</p>
+        </div>
+      </div>
+      <div class="card"> 
+	  <img src="cartoon4.jpg" class="card-img-top1" alt="Image 1">
+        <div class="card-body text-center">
+          <p class="card-text">I was recently cared for at fixhealth hospital.I just wanted to say a few words about the 
+		  exceptional care I received in the Jamaica Hospital Cardiac Care Unit and the MICU. All of the doctors and nurses were friendly, 
+		  pleasant, kind, thorough, conscientious and professional. I am happy to have been in their care..</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+      var age = document.getElementById('age').value;
+      var city = document.getElementById('city').value;
+      var company = document.getElementById('company').value;
+      var complaints = document.getElementById('complaints').value;
+
+      if (name === "" || phone === "" || age === "" || city === "" || company === "" || complaints === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+
+      if (isNaN(age) || age < 1) {
+        alert("Please enter a valid age");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  
+  
+
+  </body>
+</html>
